@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap");
 
-.container {
+.home-container {
   background-color: black;
   width: 100vw;
   height: 100vh;
+}
+.title-container {
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 .title {
   font-family: "Corinthia", cursive;
