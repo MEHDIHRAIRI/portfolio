@@ -1,22 +1,22 @@
 svg {
-  height: 80px;
+  height: 70px;
   position: absolute;
-  width: 80px;
+  width: 70px;
 }
 .plates {
   display: flex;
   flex-wrap: wrap;
-  max-height: 110px;
-  width: 110px;
+  max-height: 70px;
+  width: 70px;
 }
 @media (max-width: 640px) {
   .plates {
-    width: 320px;
+    width: 30px;
   }
 }
 .plate {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 .burger {
   filter: url(#gooeyness);

@@ -5,7 +5,15 @@ import { NavBar } from "../components/NavBar";
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div
+      className="home-container"
+      style={{
+        width: "100vw",
+        height: "100vh",
+        minWidth: "100vw",
+        minheight: "100vh",
+      }}
+    >
       <NavBar />
       <div className="title-container">
         <div>
