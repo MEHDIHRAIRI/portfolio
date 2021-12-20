@@ -51,7 +51,7 @@ function App() {
           style={{
             width: "100vw",
             height: "100vh",
-            backgroundColor: "lightgreen",
+            backgroundColor: "black",
           }}
         ></div>
         <div
