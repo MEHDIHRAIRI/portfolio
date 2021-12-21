@@ -20,15 +20,6 @@ const posts = [
       content: "Worth a visit",
     },
   },
-  {
-    id: 2,
-    content: {
-      title: "Street in Jerusalem",
-      image:
-        "https://i.postimg.cc/3JFYC4hw/be-your-mern-stack-developer-mongodb-express-react-nodejs.jpg",
-      content: "Street in Valley of Refaim",
-    },
-  },
 ];
 export const Projects = () => {
   return (

@@ -61,6 +61,9 @@ function App() {
             width: "100vw",
             height: "100vh",
             backgroundColor: "black",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Projects />
