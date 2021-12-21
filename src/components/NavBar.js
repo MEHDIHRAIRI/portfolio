@@ -23,7 +23,7 @@ export const NavBar = () => {
           />
         </li>
         <li>
-          <a href="../../mehdihrairicv.pdf" download>
+          <a className="resume-button" href="../../mehdihrairicv.pdf" download>
             Resume
           </a>
         </li>
