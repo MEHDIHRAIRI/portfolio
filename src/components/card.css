@@ -1,58 +1,135 @@
-.card-grid-view {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+.card {
+  border-radius: 8px;
+  border: 2px solid white;
+  border-width: 2px;
+  height: 450px;
+  width: 500px;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 80px -10px black;
+  overflow: hidden;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  max-width: 450px;
-  min-width: 400px;
-  width: 450px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  color: white;
-  margin: 10px;
-  cursor: pointer;
-
-  transition: all 0.2s ease-out;
-  border: 2px solid #ddd;
-}
-.card-body:hover {
-  box-shadow: 0 0 4em 0px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
-}
-.card-body:active {
-  transform: scale(1.01) translateY(0.2rem);
+.card-blur {
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 1px);
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
 }
 
-.card-body img {
-  position: relative;
+.card:hover .card-blur {
+  opacity: 0.6;
+}
 
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 80px;
   width: 100%;
+  bottom: 0;
 }
 
-.card-body .card-img {
-  width: 450px;
-  height: 250px;
+#curve {
+  position: relative;
+  fill: white;
+  color: lightcoral;
+  width: 600px;
+  height: 450px;
 }
 
-.card-content {
-  padding: 0.8em;
-  font-family: "Georgia";
+.connections {
+  height: 80px;
   width: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  bottom: 20px;
+  left: 480px;
+  margin: auto;
 }
 
-.card-content h3 {
-  margin: 0;
-  padding: 0;
+.connection {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  margin-right: 25px;
+  transform: translateY(200px);
+
+  transition: transform 1s cubic-bezier(0.46, 1.48, 0.18, 0.81);
 }
 
-.ui-button {
-  margin: 5px 10px;
+.card:hover .connection {
+  transform: translateY(0px);
 }
-.ui-button.clicked {
-  color: #e57373;
+
+.info {
+  font-family: Inconsolata;
+  padding-left: 20px;
+  transform: translateY(250px);
+
+  transition: transform 1s cubic-bezier(0.31, 1.21, 0.64, 1.02);
+}
+
+.card:hover .info {
+  transform: translateY(0px);
+}
+
+.name {
+  font-weight: bolder;
+  padding-top: 5px;
+}
+
+.job {
+  margin-top: 10px;
+}
+
+.connection.facebook {
+  height: 35px;
+  width: 35px;
+  margin-left: 20px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.twitter {
+  transition-delay: 0.06s;
+}
+
+.connection.behance {
+  transition-delay: 0.12s;
+}
+
+.connection.facebook .icon {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+
+.connection.twitter .icon {
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  margin-left: 4px;
+  background-position: center;
+  background-size: cover;
+}
+
+.connection.behance .icon {
+  height: 18px;
+  width: 18px;
+  margin-top: 3px;
+  margin-left: 4px;
+  background-position: center;
+  background-size: cover;
 }
