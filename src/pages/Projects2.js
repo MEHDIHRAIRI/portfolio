@@ -1,31 +1,29 @@
 import React from "react";
+import "./Projects2.css";
 import { Card } from "../components/Card";
-import "./Projects.css";
 const posts = [
   {
     id: 0,
     content: {
-      title: "Portfolio",
+      title: "Blitz Education Platform",
       image:
-        "https://i.postimg.cc/PrwLxWgs/Capture-d-cran-2021-12-21-140047.png",
-      content: "React",
-      github: "https://github.com/MEHDIHRAIRI/portfolio",
-      website: "https://epic-dijkstra-455a35.netlify.app/",
+        "https://i.postimg.cc/qRK5ZZtM/Capture-d-cran-2021-12-21-141638.png",
+      content: "React, NodeJs, MongoDB, ExpressJs, Tensorflow",
+      github: "https://github.com/MEHDIHRAIRI/Elite-devs-Blitz-Chatbot",
     },
   },
   {
     id: 1,
     content: {
-      title: "Seed",
+      title: "Kisalu",
       image:
-        "https://i.postimg.cc/4dkSSPbR/Capture-d-cran-2021-12-20-223841.png",
-      content: "React, NodeJs, MongoDB, ExpressJs",
-      github: "https://github.com/MEHDIHRAIRI/Seed_Tunisia-React-Node-Mongo",
-      website: "https://ecstatic-lamarr-8b5220.netlify.app/",
+        "https://i.postimg.cc/JhQnBmcj/Capture-d-cran-2021-12-21-143553.png",
+      content: "Nx, Ionic, GraphQl, DynamoDB, Amazon AppSync & Amplify",
+      github: "https://github.com/MEHDIHRAIRI/kisalu-Aws-React-Nx-GraphQl",
     },
   },
 ];
-export const Projects = () => {
+export const Projects2 = () => {
   return (
     <div
       style={{

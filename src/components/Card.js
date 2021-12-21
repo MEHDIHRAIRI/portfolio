@@ -23,22 +23,27 @@ export const Card = ({ image, title, content, github, website }) => {
               style={{ width: "30px", height: "30px" }}
             />
           </div>
-          <div
-            class="connection"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {" "}
-            <SocialIcon
-              url={website}
-              bgColor="white"
-              fgColor="black"
-              style={{ width: "30px", height: "30px" }}
-            />
-          </div>
+
+          {website ? (
+            <div
+              class="connection"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {" "}
+              <SocialIcon
+                url={website}
+                bgColor="white"
+                fgColor="black"
+                style={{ width: "30px", height: "30px" }}
+              />
+            </div>
+          ) : (
+            console.log("")
+          )}
         </div>
 
         <div class="info">

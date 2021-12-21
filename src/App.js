@@ -7,6 +7,7 @@ import "animate.css";
 import { Projects } from "./pages/Projects";
 
 import VisibilitySensor from "react-visibility-sensor";
+import { Projects2 } from "./pages/Projects2";
 
 function App() {
   const home = useRef(null);
@@ -74,16 +75,17 @@ function App() {
             width: "100vw",
             height: "100vh",
             backgroundColor: "black",
-            padding: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <VisibilitySensor partialVisibility onChange={onChange}>
-            <div
+            <Projects2
               className={
                 isVisible ? "animate__animated animate__slideInLeft" : "hidden"
               }
-              style={{ backgroundColor: "white", width: "50%", height: "50%" }}
-            ></div>
+            />
           </VisibilitySensor>
         </div>
       </ReactScrollWheelHandler>
