@@ -23,6 +23,11 @@ export const NavBar = () => {
           />
         </li>
         <li>
+          <a href="../../mehdihrairicv.pdf" download>
+            Resume
+          </a>
+        </li>
+        <li>
           <BurgerIcon />
         </li>
       </ul>
