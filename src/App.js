@@ -8,6 +8,7 @@ import { Projects } from "./pages/Projects";
 
 import VisibilitySensor from "react-visibility-sensor";
 import { Projects2 } from "./pages/Projects2";
+import { ContactForm } from "./pages/ContactForm";
 
 function App() {
   const home = useRef(null);
@@ -86,6 +87,21 @@ function App() {
                 isVisible ? "animate__animated animate__slideInLeft" : "hidden"
               }
             />
+          </VisibilitySensor>
+        </div>
+        <div
+          ref={contact}
+          style={{
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "black",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <VisibilitySensor partialVisibility onChange={onChange}>
+            <ContactForm />
           </VisibilitySensor>
         </div>
       </ReactScrollWheelHandler>
