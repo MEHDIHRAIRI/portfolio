@@ -2,3 +2,6 @@
   margin: 0;
   padding: 0;
 }
+.isVisible {
+  transition: opacity 0.5 500ms linear;
+}

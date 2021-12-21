@@ -2,6 +2,11 @@ import React, { useState, useRef } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import "animate.css";
+
+import { Projects } from "./pages/Projects";
+
+import VisibilitySensor from "react-visibility-sensor";
 
 function App() {
   const home = useRef(null);
@@ -9,7 +14,8 @@ function App() {
   const contact = useRef(null);
 
   const [index, setIndex] = useState(0);
-  const [sections, setSections] = useState([home, about, contact]);
+  const [sections] = useState([home, about, contact]);
+  const [isVisible, setIsVisible] = useState(false);
   const scrollUp = () => {
     if (index > 0) {
       setIndex(index - 1);
@@ -40,6 +46,9 @@ function App() {
       });
     }
   };
+  function onChange(visible) {
+    setIsVisible(visible);
+  }
   return (
     <div class="App">
       <ReactScrollWheelHandler upHandler={scrollUp} downHandler={scrollDown}>
@@ -53,15 +62,27 @@ function App() {
             height: "100vh",
             backgroundColor: "black",
           }}
-        ></div>
+        >
+          <Projects />
+        </div>
         <div
           ref={contact}
           style={{
             width: "100vw",
             height: "100vh",
             backgroundColor: "black",
+            padding: "20px",
           }}
-        ></div>
+        >
+          <VisibilitySensor partialVisibility onChange={onChange}>
+            <div
+              className={
+                isVisible ? "animate__animated animate__slideInLeft" : "hidden"
+              }
+              style={{ backgroundColor: "white", width: "50%", height: "50%" }}
+            ></div>
+          </VisibilitySensor>
+        </div>
       </ReactScrollWheelHandler>
     </div>
   );
