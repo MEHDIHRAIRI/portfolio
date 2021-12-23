@@ -16,52 +16,47 @@ export const ContactForm = () => {
   return (
     <div className="contact-container">
       <div className="form">
-        <div className="form-group">
-          <div className="top-inputs">
-            <input
-              classname="top-input"
-              type="text"
-              onChange={(e) => {
-                setData({ ...data, from_name: e.target.value });
-              }}
-            />
-            <input
-              classname="top-input"
-              type="text"
-              onChange={(e) => {
-                setData({ ...data, subject: e.target.value });
-              }}
-            />
-          </div>
-          <div className="bottom-inputs">
-            <textarea
-              className="text-area"
-              rows={7}
-              type="text"
-              onChange={(e) => {
-                setData({ ...data, message: e.target.value });
-              }}
-              placeholder="Message"
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
+        <h1 className="form-title">Contact Form</h1>
+        <div className="top-inputs">
+          <input
+            className="left-input"
+            type="text"
+            placeholder="Name"
+            onChange={(e) => {
+              setData({ ...data, from_name: e.target.value });
             }}
-          >
-            <a
-              onClick={sendMail}
-              style={{
-                backgroundColor: "white",
-                width: "40%",
-              }}
-            >
-              Send
-            </a>
-          </div>
+          />
+          <input
+            className="right-input"
+            type="text"
+            placeholder="Email"
+            onChange={(e) => {
+              setData({ ...data, subject: e.target.value });
+            }}
+          />
+        </div>
+        <div className="bottom-inputs">
+          <textarea
+            className="text-area"
+            rows={7}
+            type="text"
+            onChange={(e) => {
+              setData({ ...data, message: e.target.value });
+            }}
+            placeholder="Message"
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <button onClick={sendMail} className="form-button">
+            Send
+          </button>
         </div>
       </div>
     </div>
