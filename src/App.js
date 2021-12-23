@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 import { Projects } from "./pages/Projects";
-import VisibilitySensor from "react-visibility-sensor";
 import { Projects2 } from "./pages/Projects2";
 import { ContactForm } from "./pages/ContactForm";
 import { Dream } from "./pages/Dream";
@@ -18,7 +17,6 @@ function App() {
 
   const [index, setIndex] = useState(0);
   const [sections] = useState([home, dream, project1, project2, contact]);
-  const [isVisible, setIsVisible] = useState(false);
   const scrollUp = () => {
     if (index > 0) {
       setIndex(index - 1);
@@ -42,16 +40,13 @@ function App() {
         top: sections[index + 1].current.offsetTop,
       });
     } else {
-      setIndex(2);
+      setIndex(4);
       window.scrollTo({
         behavior: "smooth",
         top: sections[4].current.offsetTop,
       });
     }
   };
-  function onChange(visible) {
-    setIsVisible(visible);
-  }
   return (
     <div class="App" className="app">
       <ReactScrollWheelHandler upHandler={scrollUp} downHandler={scrollDown}>
@@ -68,9 +63,7 @@ function App() {
           <Projects2 />
         </div>
         <div ref={contact} className="app-container">
-          <VisibilitySensor partialVisibility onChange={onChange}>
-            <ContactForm />
-          </VisibilitySensor>
+          <ContactForm />
         </div>
       </ReactScrollWheelHandler>
     </div>
