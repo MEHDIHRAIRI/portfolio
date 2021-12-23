@@ -2,21 +2,22 @@ import React, { useState, useRef } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
-import "animate.css";
 
 import { Projects } from "./pages/Projects";
-
 import VisibilitySensor from "react-visibility-sensor";
 import { Projects2 } from "./pages/Projects2";
 import { ContactForm } from "./pages/ContactForm";
+import { Dream } from "./pages/Dream";
 
 function App() {
   const home = useRef(null);
-  const about = useRef(null);
+  const dream = useRef(null);
+  const project1 = useRef(null);
+  const project2 = useRef(null);
   const contact = useRef(null);
 
   const [index, setIndex] = useState(0);
-  const [sections] = useState([home, about, contact]);
+  const [sections] = useState([home, dream, project1, project2, contact]);
   const [isVisible, setIsVisible] = useState(false);
   const scrollUp = () => {
     if (index > 0) {
@@ -34,7 +35,7 @@ function App() {
     }
   };
   const scrollDown = () => {
-    if (index < 2) {
+    if (index < 4) {
       setIndex(index + 1);
       window.scrollTo({
         behavior: "smooth",
@@ -44,7 +45,7 @@ function App() {
       setIndex(2);
       window.scrollTo({
         behavior: "smooth",
-        top: sections[2].current.offsetTop,
+        top: sections[4].current.offsetTop,
       });
     }
   };
@@ -52,54 +53,21 @@ function App() {
     setIsVisible(visible);
   }
   return (
-    <div class="App">
+    <div class="App" className="app">
       <ReactScrollWheelHandler upHandler={scrollUp} downHandler={scrollDown}>
-        <div ref={home}>
+        <div className="app-container" ref={home}>
           <Home />
         </div>
-        <div
-          ref={about}
-          style={{
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "black",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div className="app-container" ref={dream}>
+          <Dream />
+        </div>
+        <div ref={project1} className="app-container">
           <Projects />
         </div>
-        <div
-          ref={contact}
-          style={{
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "black",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <VisibilitySensor partialVisibility onChange={onChange}>
-            <Projects2
-              className={
-                isVisible ? "animate__animated animate__slideInLeft" : "hidden"
-              }
-            />
-          </VisibilitySensor>
+        <div ref={project2} className="app-container">
+          <Projects2 />
         </div>
-        <div
-          ref={contact}
-          style={{
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "black",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div ref={contact} className="app-container">
           <VisibilitySensor partialVisibility onChange={onChange}>
             <ContactForm />
           </VisibilitySensor>

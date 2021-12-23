@@ -1,7 +1,16 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 .isVisible {
   transition: opacity 0.5 500ms linear;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }

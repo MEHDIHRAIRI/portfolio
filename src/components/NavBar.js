@@ -1,6 +1,5 @@
 import React from "react";
 import "./NavBar.css";
-import { BurgerIcon } from "../components/BurgerIcon";
 import { SocialIcon } from "react-social-icons";
 export const NavBar = () => {
   return (
@@ -26,9 +25,6 @@ export const NavBar = () => {
           <a className="resume-button" href="../../mehdihrairicv.pdf" download>
             Resume
           </a>
-        </li>
-        <li>
-          <BurgerIcon />
         </li>
       </ul>
     </div>
