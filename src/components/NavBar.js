@@ -11,10 +11,12 @@ export const NavBar = () => {
             bgColor="white"
             fgColor="black"
             style={{ width: "30px", height: "30px" }}
+            target="_blank"
           />
         </li>
         <li>
           <SocialIcon
+            target="_blank"
             url="https://github.com/MEHDIHRAIRI"
             bgColor="white"
             fgColor="black"

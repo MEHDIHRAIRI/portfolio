@@ -21,6 +21,7 @@ export const Card = ({ image, title, content, github, website }) => {
               bgColor="white"
               fgColor="black"
               style={{ width: "30px", height: "30px" }}
+              target="_blank"
             />
           </div>
 
@@ -39,6 +40,7 @@ export const Card = ({ image, title, content, github, website }) => {
                 bgColor="white"
                 fgColor="black"
                 style={{ width: "30px", height: "30px" }}
+                target="_blank"
               />
             </div>
           ) : (
